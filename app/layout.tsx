@@ -16,10 +16,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "IFFA Awards",
-  description: "Celebrate cinema excellence with the IFFA Awards. Discover the latest winners, nominations, and festival highlights.",
+  description:
+    "Celebrate cinema excellence with the IFFA Awards. Discover the latest winners, nominations, and festival highlights.",
+  // This enables standalone experience when saved to Home Screen on iOS
   appleWebApp: {
+    capable: true,
     title: "IFFA Awards",
+    statusBarStyle: "black-translucent", 
   },
+  icons: {
+    apple: "/apple-icon.png", 
+  },
+  
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
