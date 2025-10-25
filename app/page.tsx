@@ -12,7 +12,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="h-dvh">
+    <div className="">
       Home
     </div>
   )

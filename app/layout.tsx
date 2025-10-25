@@ -42,7 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <Header/>
-        <div className="my-4 mx-5">
+        <div className="my-4 mx-5 min-h-[80dvh]">
           {children}
         </div>
         
