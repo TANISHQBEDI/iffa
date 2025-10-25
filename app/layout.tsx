@@ -42,7 +42,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <Header/>
-        {children}
+        <div className="my-4 mx-5">
+          {children}
+        </div>
+        
         <Footer/>
       </body>
     </html>
