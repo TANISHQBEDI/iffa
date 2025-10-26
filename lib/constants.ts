@@ -21,3 +21,6 @@ export const NAV_ITEMS: NavItem[] = [
         label: 'Partners & News'
     }
 ]
+
+
+export const PLAYLIST_ID = "PLnYoY3EKzq0qe7TlzgkfjKNGPAgGoSfev";
