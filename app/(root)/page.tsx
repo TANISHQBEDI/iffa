@@ -9,11 +9,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Video from '@/components/home/video/Video'
+import VideoContainer from '@/components/home/video/VideoContainer'
+import FeaturedContainer from '@/components/home/featured/FeaturedContainer'
 
 const Home = () => {
   return (
-    <div className="">
-      Home
+    <div className="w-full h-full">
+      <VideoContainer/>
+      <FeaturedContainer/>
     </div>
   )
 }
