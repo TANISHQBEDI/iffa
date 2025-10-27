@@ -23,4 +23,6 @@ export const NAV_ITEMS: NavItem[] = [
 ]
 
 
-export const PLAYLIST_ID = "PLnYoY3EKzq0qe7TlzgkfjKNGPAgGoSfev";
+export const PLAYLIST_ID = process.env.PLAYLIST_ID;
+
+export const API_BASE_URL = process.env.API_BASE_URL;

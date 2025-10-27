@@ -5,7 +5,7 @@ import Image from 'next/image'
 const DisplayCard = (props: DisplayCardProps) => {
     const { title, imageUrl, directorNames } = props
     return (
-        <Card className="aspect-2/3 w-[200px] sm:w-[250px] md:w-[350px] relative card-hover ">
+        <Card className="aspect-2/3 w-[200px] sm:w-[250px] md:w-[350px] relative card-hover rounded-md">
             <Image
                 fill
                 src={imageUrl}
