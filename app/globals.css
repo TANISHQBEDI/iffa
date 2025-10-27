@@ -146,4 +146,22 @@
   .form-input {
     @apply h-12 px-3 py-3 text-white text-base placeholder:text-gray-500 border-gray-600 bg-gray-800 rounded-lg focus:!border-yellow-500 focus:ring-0;
   }
+
+  .card-hover:hover {
+    
+    .card-hover-text{
+      @apply inline-block uppercase text-xs md:text-xl;
+    }
+
+    .card-hover-overlay{
+      @apply absolute inset-0 bg-black/70 rounded-md;
+    }
+  }
+  .card-hover{
+    .card-hover-text{
+      @apply hidden;
+    }
+  }
+  
+
 }
