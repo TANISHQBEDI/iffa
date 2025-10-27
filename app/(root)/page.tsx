@@ -15,7 +15,7 @@ import FeaturedContainer from '@/components/home/featured/FeaturedContainer'
 
 const Home = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full space-y-10">
       <VideoContainer/>
       <FeaturedContainer/>
     </div>
