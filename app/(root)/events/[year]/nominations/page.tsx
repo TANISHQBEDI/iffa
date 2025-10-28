@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import {getNominationsForYear, getSubmissionsForYear} from "@/lib/dataFetcher";
+import DisplayCard from "@/components/DisplayCard";
 
 export async function generateMetadata({params}:{params:Promise<{year:number}>}):Promise<Metadata> {
   const {year} = await params;
@@ -10,8 +12,22 @@ export async function generateMetadata({params}:{params:Promise<{year:number}>})
 
 const Nominations = async ({params}:{params: Promise<{year: number}>}) => {
     const {year} = await params;
+    const content = await getNominationsForYear(year)
   return (
-    <div>Nominations for {year}</div>
+      <div>
+          <div className='title'>Nominations</div>
+          <div className='event-section-grid'>
+              {content.map((item) => (
+                  <DisplayCard
+                      key={item.contentId}
+                      title={item.title}
+                      imageUrl={item.portraitImageUrl!}
+                      directorNames={item.directors}
+                  />
+              ))}
+          </div>
+
+      </div>
   )
 }
 

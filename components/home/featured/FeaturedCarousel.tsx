@@ -4,7 +4,7 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import AutoScroll from 'embla-carousel-auto-scroll'
 import React from 'react'
 
-const FeaturedCarousel = ({ items }: { items: ContentItem[] }) => {
+const FeaturedCarousel = ({ items }: { items: FeaturedContentDto[] }) => {
 
     const autoScroll = React.useRef(
         AutoScroll({ speed: 1, playOnInit: true, stopOnMouseEnter: true, stopOnInteraction: false })
@@ -18,10 +18,10 @@ const FeaturedCarousel = ({ items }: { items: ContentItem[] }) => {
         >
             <CarouselContent>
                 {items?.map((item) => (
-                    <CarouselItem key={item.contentId} className='basis-auto'>
+                    <CarouselItem key={`${2025}-${item.contentId}`} className='basis-auto'>
                         <DisplayCard
                             title={item.title}
-                            imageUrl={item.portraitImageUrl}
+                            imageUrl={item.portraitImageUrl!}
                             directorNames={item.directors}
                         />
                     </CarouselItem>
