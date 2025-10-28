@@ -1,4 +1,4 @@
-export {};
+export { };
 
 declare global {
     type DisplayCardProps = {
@@ -14,5 +14,11 @@ declare global {
         landscapeImageUrl: string;
         directors: string[];
 
+    }
+
+    export type SocialLink = {
+        label: string
+        href: string
+        icon: 'facebook' | 'instagram' | 'linkedin' | 'youtube'
     }
 }

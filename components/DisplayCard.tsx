@@ -8,9 +8,11 @@ const DisplayCard = (props: DisplayCardProps) => {
         <Card className="aspect-2/3 w-[200px] sm:w-[250px] md:w-[350px] relative card-hover rounded-md">
             <Image
                 fill
+                sizes='(min-width: 768px) 350px, (min-width: 640px) 250px, 200px'
                 src={imageUrl}
                 alt={title}
                 className="object-cover rounded-md absolute inset-0 z-0"
+                loading='eager'
             />
             <div className='card-hover-overlay'/>
 
