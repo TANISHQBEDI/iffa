@@ -21,4 +21,10 @@ declare global {
         href: string
         icon: 'facebook' | 'instagram' | 'linkedin' | 'youtube'
     }
+
+    export type NavItem = {
+        label: string;
+        href: string;             // direct link OR leave undefined to make it a trigger with children
+        external?: boolean;
+    };
 }
