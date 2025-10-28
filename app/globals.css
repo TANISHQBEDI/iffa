@@ -147,6 +147,13 @@
     @apply h-12 px-3 py-3 text-white text-base placeholder:text-gray-500 border-gray-600 bg-gray-800 rounded-lg focus:!border-yellow-500 focus:ring-0;
   }
 
+  
+  
+
+}
+
+@layer components{
+
   .card-hover:hover {
     
     .card-hover-text{
@@ -162,6 +169,32 @@
       @apply hidden;
     }
   }
-  
+
+  .footer-container{
+    @apply w-full gap-2 grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 container mx-auto my-10 px-5 sm:px-0;
+
+    .footer-item{
+      @apply items-center;
+    }
+    .footer-acknowledgement{
+      @apply grid-rows-2 place-items-center space-y-2 text-wrap text-justify text-xs font-semibold;
+    }
+
+    .footer-links{
+      @apply flex flex-col items-center gap-3;
+      .brand{ @apply block; }
+      .footer-linklist{ @apply flex flex-wrap items-center justify-center gap-x-4 gap-y-2; }
+      .footer-link-btn{ @apply h-8 px-3 text-sm font-medium text-neutral-600 hover:text-black dark:text-neutral-300 dark:hover:text-white; }
+    }
+    .footer-socials{
+      @apply flex flex-col items-center gap-3;
+      .footer-socials-title{ @apply text-xs uppercase tracking-wide text-neutral-500; }
+      .socials-list{ @apply flex items-center justify-center gap-3; }
+      .social-icon{ @apply h-12 w-12 rounded-full border border-neutral-200 hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800 transition-colors flex items-center justify-center; }
+      .social-icon svg{ @apply h-7 w-7 text-neutral-600 dark:text-neutral-300; }
+    }
+  }
+
+
 
 }
