@@ -42,7 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <Header/>
-        <div className="w-full h-full space-y-10">
+        <div className="w-full h-full container mx-auto my-5">
           {children}
         </div>
         

@@ -1,6 +1,6 @@
-export const YEARS = [2025, 2024, 2023];
+export const YEARS = [2025, 2024, 2023, 2022];
 
-
+export const EVENT_SECTIONS = ['Submissions', 'Nominations', 'Winners'];
 
 export const NAV_ITEMS: NavItem[] = [
     {
@@ -22,6 +22,9 @@ export const NAV_ITEMS: NavItem[] = [
 export const PLAYLIST_ID = process.env.PLAYLIST_ID;
 
 export const API_BASE_URL = process.env.API_BASE_URL;
+
+// Global cache duration used across client-side fetch helpers (seconds)
+export const CACHE_SECONDS = 2 * 60 * 60; // 2 hours
 
 export const FOOTER_ACKNOWLEDGEMENT = `We acknowledge the Traditional Owners of the land where we work and live. 
 We pay our respects to Elders past, present and emerging. 

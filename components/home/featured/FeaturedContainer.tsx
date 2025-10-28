@@ -1,6 +1,5 @@
-import DisplayCard from "@/components/DisplayCard"
 import FeaturedCarousel from "./FeaturedCarousel"
-import { getFeaturedContent } from "@/hooks/getFeatured"
+import {getFeaturedContent} from "@/lib/dataFetcher"
 
 const FeaturedContainer = async () => {
   const items = await getFeaturedContent()
