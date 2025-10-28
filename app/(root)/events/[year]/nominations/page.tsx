@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {getNominationsForYear, getSubmissionsForYear} from "@/lib/dataFetcher";
+import {getNominationsForYear} from "@/lib/dataFetcher";
 import DisplayCard from "@/components/DisplayCard";
 
 export async function generateMetadata({params}:{params:Promise<{year:number}>}):Promise<Metadata> {
