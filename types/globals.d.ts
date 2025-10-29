@@ -97,4 +97,15 @@ declare global {
         href: string;             // direct link OR leave undefined to make it a trigger with children
         external?: boolean;
     };
+
+    export type ContactSubmission = {
+        id: number
+        fullName: string
+        phone: string
+        address: string
+        company: string
+        email: string
+        message: string
+        createdAt: string
+    }
 }

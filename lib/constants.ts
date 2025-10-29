@@ -1,4 +1,4 @@
-export const YEARS = [2025, 2024, 2023, 2022];
+    export const YEARS = [2025, 2024, 2023, 2022];
 
 export const EVENT_SECTIONS = ['Submissions', 'Nominations', 'Winners'];
 
