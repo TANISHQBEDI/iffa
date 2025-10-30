@@ -4,6 +4,7 @@ import Image from "next/image";
 import ContentDetails from "@/components/ContentDetails";
 import {Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 import CrewCard from "@/components/CrewCard";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
 
 const Page = async ({params}: { params: Promise<{ id: number }> }) => {
     const {id} = await params;
@@ -14,16 +15,20 @@ const Page = async ({params}: { params: Promise<{ id: number }> }) => {
             <div className="flex flex-col lg:flex-row gap-4 p-4 items-start">
                 {/* IMAGE SECTION */}
                 <div className="relative w-full lg:w-1/2 overflow-hidden rounded-md">
-                    <div className="relative w-full aspect-[2/3] lg:aspect-[3/4] lg:max-h-[80vh]">
-                        <Image
-                            src={portraitImageUrl || '/fallbacks/no-poster.svg'}
-                            alt={title}
-                            fill
-                            priority
-                            sizes="(min-width: 768px) 350px, (min-width: 640px) 250px, 200px"
-                            className="object-cover rounded-md"
-                        />
-                    </div>
+                    {/*<div className="relative w-full aspect-[2/3] lg:aspect-[2/3] lg:max-h-[80vh]">*/}
+                        <AspectRatio className="w-full h-full" ratio={2 / 3}>
+                            <Image
+                                src={portraitImageUrl || '/fallbacks/no-poster.svg'}
+                                alt={title}
+                                fill
+                                priority
+                                sizes="(min-width: 48rem) 21.875rem, (min-width: 40rem) 15.625rem, 12.5rem"
+
+                                className="object-cover rounded-md"
+                            />
+                        </AspectRatio>
+
+                    {/*</div>*/}
                 </div>
 
                 {/* DETAILS SECTION */}
