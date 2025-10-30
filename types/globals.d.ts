@@ -3,7 +3,7 @@ declare global {
     type DisplayCardProps = {
         title: string;
         directorNames?: string[];
-        imageUrl: string;
+        imageUrl?: string;
         size?: 'sm' | 'md' | 'lg';
         id: number | string;
     }
@@ -83,6 +83,7 @@ declare global {
     export type CrewDetailDto = {
         id: number;
         name: string;
+        imageUrl?: string | null;
         biography?: string | null;
         description?: string | null;
         contents?: { id: number; title: string; imageUrl?: string | null }[];
