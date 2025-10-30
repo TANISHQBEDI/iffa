@@ -1,11 +1,19 @@
-import React from 'react'
+import Link from 'next/link'
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
 
+const sizeClassMap: Record<NonNullable<DisplayCardProps['size']>, string> = {
+    sm: 'w-[150px] sm:w-[180px] md:w-[220px] aspect-[2/3]',
+    md: 'w-[200px] sm:w-[250px] md:w-[350px] aspect-[2/3]',
+    lg: 'w-[260px] sm:w-[320px] md:w-[420px] aspect-[2/3]'
+}
+
 const DisplayCard = (props: DisplayCardProps) => {
-    const { title, imageUrl, directorNames } = props
-    return (
-        <Card className="aspect-2/3 w-[200px] sm:w-[250px] md:w-[350px] relative card-hover rounded-md">
+    const { id, title, imageUrl, directorNames, size = 'md' } = props
+    const sizeClasses = sizeClassMap[size] || sizeClassMap.md
+
+    const inner = (
+        <Card className={`${sizeClasses} relative card-hover rounded-md`}>
             <Image
                 fill
                 sizes='(min-width: 768px) 350px, (min-width: 640px) 250px, 200px'
@@ -34,6 +42,13 @@ const DisplayCard = (props: DisplayCardProps) => {
 
             </CardFooter>
         </Card>
+    )
+
+    const target = String(id)
+    return (
+        <Link href={`/content/${target}`} aria-label={`Open ${title}`}>
+            {inner}
+        </Link>
     )
 }
 

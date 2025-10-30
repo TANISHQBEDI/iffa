@@ -23,6 +23,8 @@ const FeaturedCarousel = ({ items }: { items: FeaturedContentDto[] }) => {
                             title={item.title}
                             imageUrl={item.portraitImageUrl!}
                             directorNames={item.directors}
+                            size='md'
+                            id={item.contentId}
                         />
                     </CarouselItem>
                 ))}

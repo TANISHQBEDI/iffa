@@ -10,7 +10,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import { sendContactEmail } from "@/lib/email";
 
-
 const ContactUs = () => {
     const [fullName, setFullName] = useState("")
     const [phone, setPhone] = useState("")
