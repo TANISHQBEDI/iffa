@@ -14,7 +14,7 @@ async function fetchJson<T>(path: string, options?: { params?: Record<string, st
         })
     }
 
-    const res = await fetch(url.toString(), { next: { revalidate: revalidateSeconds } })
+    const res = await fetch(url.toString(), { next: { revalidate: revalidateSeconds }})
     if (!res.ok) {
         const text = await res.text().catch(() => '')
         throw new Error(`Failed to fetch ${url.toString()}: ${res.status} ${res.statusText} ${text ? `- ${text}` : ''}`)
