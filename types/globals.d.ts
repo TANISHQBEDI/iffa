@@ -4,6 +4,8 @@ declare global {
         title: string;
         directorNames?: string[];
         imageUrl: string;
+        size?: 'sm' | 'md' | 'lg';
+        id: number | string;
     }
 
     type ContentItem = {

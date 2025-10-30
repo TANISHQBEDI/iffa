@@ -20,9 +20,11 @@ const Nominations = async ({params}:{params: Promise<{year: number}>}) => {
               {content.map((item) => (
                   <DisplayCard
                       key={item.contentId}
+                      id={item.contentId}
                       title={item.title}
                       imageUrl={item.portraitImageUrl!}
                       directorNames={item.directors}
+                      size='sm'
                   />
               ))}
           </div>
